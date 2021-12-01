@@ -1,0 +1,31 @@
+@import '../../styles/variables.scss';
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    padding: 1rem;
+    background-color: $color-primary;
+    .buttons-container {
+        width: 60%;
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+.logo-image {
+    width: 100px;
+    height: auto;
+    mix-blend-mode: multiply;
+}
+
+@media only screen and (max-width: 768px) {
+    .logo-image {
+        width: 60px;
+    }
+}

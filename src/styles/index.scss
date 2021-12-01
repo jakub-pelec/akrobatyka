@@ -1,0 +1,47 @@
+@import "../styles/variables.scss";
+
+body {
+    background-color: $background-color;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, "sans-serif";
+    color: $text-color;
+}
+
+.main-header {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 56px;
+}
+
+h2 {
+    font-size: 48px;
+}
+h3 {
+    font-size: 40px;
+}
+h4 {
+    font-size: 32px;
+}
+h5 {
+    font-size: 24px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+img {
+    max-height: 600px;
+    max-width: auto;
+    object-fit: contain;
+}

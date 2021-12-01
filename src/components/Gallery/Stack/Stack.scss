@@ -1,0 +1,76 @@
+@import "../../../styles/variables.scss";
+
+.stack {
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+
+    &.closed {
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            background-color: $color-primary-opaque;
+            transform: rotate(5deg) scale(1.2);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    .gallery-image {
+        width: 200px;
+        mix-blend-mode: difference;
+    }
+
+    .gallery-images-stack {
+        width: 200px;
+        margin: 40px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .stack {
+        padding: 3px;
+    
+        &.closed {
+            transition: none;
+            &:hover {
+                background-color: transparent;
+                transform: none;
+                transition: none;
+            }
+        }
+    
+        .gallery-image {
+            width: 100px;
+            mix-blend-mode: difference;
+        }
+    
+        .gallery-images-stack {
+            width: 100px;
+            margin: 0px;
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .stack {
+        padding: 3px;
+    
+        &.closed {
+            transition: none;
+            &:hover {
+                background-color: transparent;
+                transform: none;
+                transition: none;
+            }
+        }
+    
+        .gallery-image {
+            width: 200px;
+            mix-blend-mode: difference;
+        }
+    
+        .gallery-images-stack {
+            width: 200px;
+            margin: 0px;
+        }
+    }
+}

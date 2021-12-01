@@ -1,0 +1,55 @@
+@import '../../styles/variables.scss';
+
+.custom-button {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid $text-color;
+    transition: all 0.3s ease-in-out;
+    background-color: $text-color;
+    color: $background-color;
+
+    &.active {
+        background-color: $background-color;
+        color: $text-color;
+        border: 1px solid $background-color;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            background-color: $background-color;
+            color: $text-color;
+        }
+    }
+
+    &:hover {
+        background-color: $background-color;
+        color: $text-color;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .custom-button {
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 1px solid $text-color;
+        transition: all 0.3s ease-in-out;
+        background-color: $text-color;
+        color: $background-color;
+    
+        &.active {
+            background-color: $background-color;
+            color: $text-color;
+            border: 1px solid $background-color;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                background-color: $background-color;
+                color: $text-color;
+            }
+        }
+    
+        &:hover {
+            background-color: $background-color;
+            color: $text-color;
+        }
+    }
+}
