@@ -1,10 +1,9 @@
 import React from "react";
 import { Dialog, DialogContent } from "@material-ui/core";
-import Img from "gatsby-image";
 
 import "./Popup.scss";
 
-export const Popup = ({ images, open }) => {
+export const Popup = ({ images, open, movie }) => {
     const getWrapperClassName = () => {
         switch (images.length) {
             case 1:
@@ -20,14 +19,22 @@ export const Popup = ({ images, open }) => {
             <DialogContent>
                 <div
                     className={`extended-images-wrapper ${getWrapperClassName()}`}
+                    role="button"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        e.preventDefault();
+                    }}
                 >
                     {images.map((image) => (
                         <div className="extended-image-wrapper">
-                            <Img
-                                className="gallery-image"
-                                fluid={image.node.childImageSharp.fluid}
-                                alt={image.node.base.split(".")[0]}
-                            />
+                            {movie ? (
+                                <video controls>
+                                    <source src={image} type="video/mp4" />
+                                    Your browser doesn't support movies
+                                </video>
+                            ) : (
+                                <img src={image} />
+                            )}
                         </div>
                     ))}
                 </div>

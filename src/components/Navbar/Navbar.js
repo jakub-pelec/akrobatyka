@@ -11,10 +11,10 @@ export const Navbar = ({ active }) => {
             title: "Strona główna",
             uri: "/",
         },
-        // {
-        //     title: "Galeria",
-        //     uri: "/gallery",
-        // },
+        {
+            title: "Galeria",
+            uri: "/gallery",
+        },
         {
             title: "Kontakt",
             uri: "/contact",

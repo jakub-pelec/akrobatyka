@@ -16,7 +16,7 @@ const ContactPage = () => {
             </Helmet>
 
             <Navbar active="/contact" />
-            <div className="page-wrapper">
+            <div className="page-wrapper-contact">
                 <Header size={1}>Klub Sportowy CRC LESZNO</Header>
                 <div className="info">
                     Klub zrzeszony w Polskim Związku Gimnastycznym, nr licencji
@@ -106,6 +106,20 @@ const ContactPage = () => {
                                 target="_blank"
                                 rel="noreferrer"
                                 href="https://www.facebook.com/Akrobatyka-Sportowa-Ko%C5%9Bcian-2043950419169504"
+                            >
+                                <img
+                                    className="fb-logo"
+                                    src={fbLogo}
+                                    alt="facebook"
+                                />
+                            </a>
+                        </div>
+                        <div className="list-item">
+                            LESZNO – AKROBATYKA SPORTOWA LESZNO
+                            <a
+                                target="_blank"
+                                rel="noreferrer"
+                                href="https://www.facebook.com/Akrobatyka-Sportowa-CRC-Leszno-215652860467577"
                             >
                                 <img
                                     className="fb-logo"
